@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker build -t devops14:latest .'
+                sh 'sudo docker build -t devops14:latest .'
             }
         }
 
