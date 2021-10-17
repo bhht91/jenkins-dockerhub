@@ -38,7 +38,7 @@ pipeline {
     }
 
     post {
-        alwalys {
+        always {
             sh 'docker logout'
         }
     }
