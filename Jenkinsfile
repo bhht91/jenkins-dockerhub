@@ -26,7 +26,7 @@ pipeline {
 
         stage('ImageTag') {
             steps {
-                sh 'docker tag devops14:latest burhan/devops14-docker:version2'
+                sh 'docker tag devops14:latest bhht91/devops14-docker:version2'
             }
         }
 
