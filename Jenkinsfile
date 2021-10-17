@@ -7,20 +7,20 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
+            steps{
                 git branch: 'main', url: 'git@github.com:bhht91/jenkins-dockerhub.git'
             }
         }
 
         stage('Build') {
-            steps {
+            steps{
                 sh 'docker build -t devops14:latest .'
             }
         }
 
         stage('Login') {
             steps {
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
 
