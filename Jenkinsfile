@@ -26,13 +26,13 @@ pipeline {
 
         stage('ImageTag') {
             steps {
-                sh 'docker tag devops14:latest bhht91/devops14-docker:version2'
+                sh 'docker tag devops14:latest bhht91/devops14-docker:version1'
             }
         }
 
         stage('Push') {
             steps {
-                sh 'docker push bhht91/devops14-docker:version2'
+                sh 'docker push bhht91/devops14-docker:version1'
             }
         }
     }
